@@ -1,0 +1,7 @@
+names:
+  0: camouflaged_object
+nc: 1
+path: D:\projects\camouflage-segmentation\yolo_dataset
+test: test\images
+train: train\images
+val: val\images

@@ -1,0 +1,175 @@
+2024-12-12 21:43:36,090 - INFO - Loading dataset configuration from yolo_dataset/dataset.yaml
+2024-12-12 21:43:36,094 - INFO - Initializing YOLOv8-n model for segmentation
+2024-12-12 21:43:40,251 - INFO - Training configuration:
+2024-12-12 21:43:40,251 - INFO - data: yolo_dataset/dataset.yaml
+2024-12-12 21:43:40,251 - INFO - epochs: 100
+2024-12-12 21:43:40,251 - INFO - batch: 8
+2024-12-12 21:43:40,251 - INFO - imgsz: 640
+2024-12-12 21:43:40,251 - INFO - save_dir: runs\segment
+2024-12-12 21:43:40,251 - INFO - cache: True
+2024-12-12 21:43:40,251 - INFO - device: 
+2024-12-12 21:43:40,251 - INFO - workers: 8
+2024-12-12 21:43:40,251 - INFO - pretrained: True
+2024-12-12 21:43:40,251 - INFO - resume: False
+2024-12-12 21:43:40,251 - INFO - verbose: True
+2024-12-12 21:43:40,251 - INFO - patience: 50
+2024-12-12 21:43:40,251 - INFO - save_period: 10
+2024-12-12 21:43:40,251 - INFO - optimizer: AdamW
+2024-12-12 21:43:40,257 - INFO - lr0: 0.001
+2024-12-12 21:43:40,257 - INFO - lrf: 0.01
+2024-12-12 21:43:40,257 - INFO - momentum: 0.937
+2024-12-12 21:43:40,257 - INFO - weight_decay: 0.0005
+2024-12-12 21:43:40,257 - INFO - warmup_epochs: 3.0
+2024-12-12 21:43:40,257 - INFO - warmup_momentum: 0.8
+2024-12-12 21:43:40,257 - INFO - warmup_bias_lr: 0.1
+2024-12-12 21:43:40,257 - INFO - box: 7.5
+2024-12-12 21:43:40,257 - INFO - seg: 7.0
+2024-12-12 21:43:40,260 - INFO - label_smoothing: 0.0
+2024-12-12 21:43:40,260 - INFO - nbs: 64
+2024-12-12 21:43:40,260 - INFO - overlap_mask: True
+2024-12-12 21:43:40,260 - INFO - mask_ratio: 4
+2024-12-12 21:43:40,260 - INFO - dropout: 0.0
+2024-12-12 21:43:40,263 - WARNING - CUDA not available. Training will proceed on CPU
+2024-12-12 21:43:40,263 - INFO - Starting training...
+2024-12-12 21:43:40,427 - ERROR - Error during training: '[31m[1mseg[0m' is not a valid YOLO argument. 
+
+    Arguments received: ['yolo', '--data', 'yolo_dataset/dataset.yaml']. Ultralytics 'yolo' commands use the following syntax:
+
+        yolo TASK MODE ARGS
+
+        Where   TASK (optional) is one of {'obb', 'segment', 'detect', 'classify', 'pose'}
+                MODE (required) is one of {'track', 'val', 'predict', 'benchmark', 'train', 'export'}
+                ARGS (optional) are any number of custom 'arg=value' pairs like 'imgsz=320' that override defaults.
+                    See all ARGS at https://docs.ultralytics.com/usage/cfg or with 'yolo cfg'
+
+    1. Train a detection model for 10 epochs with an initial learning_rate of 0.01
+        yolo train data=coco8.yaml model=yolo11n.pt epochs=10 lr0=0.01
+
+    2. Predict a YouTube video using a pretrained segmentation model at image size 320:
+        yolo predict model=yolo11n-seg.pt source='https://youtu.be/LNwODJXcvt4' imgsz=320
+
+    3. Val a pretrained detection model at batch-size 1 and image size 640:
+        yolo val model=yolo11n.pt data=coco8.yaml batch=1 imgsz=640
+
+    4. Export a YOLO11n classification model to ONNX format at image size 224 by 128 (no TASK required)
+        yolo export model=yolo11n-cls.pt format=onnx imgsz=224,128
+
+    5. Streamlit real-time webcam inference GUI
+        yolo streamlit-predict
+
+    6. Ultralytics solutions usage
+        yolo solutions count or in ['heatmap', 'queue', 'speed', 'workout', 'analytics', 'trackzone'] source="path/to/video/file.mp4"
+
+    7. Run special commands:
+        yolo help
+        yolo checks
+        yolo version
+        yolo settings
+        yolo copy-cfg
+        yolo cfg
+        yolo solutions help
+
+    Docs: https://docs.ultralytics.com
+    Solutions: https://docs.ultralytics.com/solutions/
+    Community: https://community.ultralytics.com
+    GitHub: https://github.com/ultralytics/ultralytics
+    
+Traceback (most recent call last):
+  File "model.py", line 122, in train_yolo_segmentation
+    results = model.train(**args)
+  File "C:\Users\sunil\anaconda3\envs\py38\lib\site-packages\ultralytics\engine\model.py", line 800, in train
+    self.trainer = (trainer or self._smart_load("trainer"))(overrides=args, _callbacks=self.callbacks)
+  File "C:\Users\sunil\anaconda3\envs\py38\lib\site-packages\ultralytics\models\yolo\segment\train.py", line 30, in __init__
+    super().__init__(cfg, overrides, _callbacks)
+  File "C:\Users\sunil\anaconda3\envs\py38\lib\site-packages\ultralytics\engine\trainer.py", line 101, in __init__
+    self.args = get_cfg(cfg, overrides)
+  File "C:\Users\sunil\anaconda3\envs\py38\lib\site-packages\ultralytics\cfg\__init__.py", line 297, in get_cfg
+    check_dict_alignment(cfg, overrides)
+  File "C:\Users\sunil\anaconda3\envs\py38\lib\site-packages\ultralytics\cfg\__init__.py", line 485, in check_dict_alignment
+    raise SyntaxError(string + CLI_HELP_MSG) from e
+SyntaxError: '[31m[1mseg[0m' is not a valid YOLO argument. 
+
+    Arguments received: ['yolo', '--data', 'yolo_dataset/dataset.yaml']. Ultralytics 'yolo' commands use the following syntax:
+
+        yolo TASK MODE ARGS
+
+        Where   TASK (optional) is one of {'obb', 'segment', 'detect', 'classify', 'pose'}
+                MODE (required) is one of {'track', 'val', 'predict', 'benchmark', 'train', 'export'}
+                ARGS (optional) are any number of custom 'arg=value' pairs like 'imgsz=320' that override defaults.
+                    See all ARGS at https://docs.ultralytics.com/usage/cfg or with 'yolo cfg'
+
+    1. Train a detection model for 10 epochs with an initial learning_rate of 0.01
+        yolo train data=coco8.yaml model=yolo11n.pt epochs=10 lr0=0.01
+
+    2. Predict a YouTube video using a pretrained segmentation model at image size 320:
+        yolo predict model=yolo11n-seg.pt source='https://youtu.be/LNwODJXcvt4' imgsz=320
+
+    3. Val a pretrained detection model at batch-size 1 and image size 640:
+        yolo val model=yolo11n.pt data=coco8.yaml batch=1 imgsz=640
+
+    4. Export a YOLO11n classification model to ONNX format at image size 224 by 128 (no TASK required)
+        yolo export model=yolo11n-cls.pt format=onnx imgsz=224,128
+
+    5. Streamlit real-time webcam inference GUI
+        yolo streamlit-predict
+
+    6. Ultralytics solutions usage
+        yolo solutions count or in ['heatmap', 'queue', 'speed', 'workout', 'analytics', 'trackzone'] source="path/to/video/file.mp4"
+
+    7. Run special commands:
+        yolo help
+        yolo checks
+        yolo version
+        yolo settings
+        yolo copy-cfg
+        yolo cfg
+        yolo solutions help
+
+    Docs: https://docs.ultralytics.com
+    Solutions: https://docs.ultralytics.com/solutions/
+    Community: https://community.ultralytics.com
+    GitHub: https://github.com/ultralytics/ultralytics
+    
+2024-12-12 21:43:40,435 - ERROR - Training failed: '[31m[1mseg[0m' is not a valid YOLO argument. 
+
+    Arguments received: ['yolo', '--data', 'yolo_dataset/dataset.yaml']. Ultralytics 'yolo' commands use the following syntax:
+
+        yolo TASK MODE ARGS
+
+        Where   TASK (optional) is one of {'obb', 'segment', 'detect', 'classify', 'pose'}
+                MODE (required) is one of {'track', 'val', 'predict', 'benchmark', 'train', 'export'}
+                ARGS (optional) are any number of custom 'arg=value' pairs like 'imgsz=320' that override defaults.
+                    See all ARGS at https://docs.ultralytics.com/usage/cfg or with 'yolo cfg'
+
+    1. Train a detection model for 10 epochs with an initial learning_rate of 0.01
+        yolo train data=coco8.yaml model=yolo11n.pt epochs=10 lr0=0.01
+
+    2. Predict a YouTube video using a pretrained segmentation model at image size 320:
+        yolo predict model=yolo11n-seg.pt source='https://youtu.be/LNwODJXcvt4' imgsz=320
+
+    3. Val a pretrained detection model at batch-size 1 and image size 640:
+        yolo val model=yolo11n.pt data=coco8.yaml batch=1 imgsz=640
+
+    4. Export a YOLO11n classification model to ONNX format at image size 224 by 128 (no TASK required)
+        yolo export model=yolo11n-cls.pt format=onnx imgsz=224,128
+
+    5. Streamlit real-time webcam inference GUI
+        yolo streamlit-predict
+
+    6. Ultralytics solutions usage
+        yolo solutions count or in ['heatmap', 'queue', 'speed', 'workout', 'analytics', 'trackzone'] source="path/to/video/file.mp4"
+
+    7. Run special commands:
+        yolo help
+        yolo checks
+        yolo version
+        yolo settings
+        yolo copy-cfg
+        yolo cfg
+        yolo solutions help
+
+    Docs: https://docs.ultralytics.com
+    Solutions: https://docs.ultralytics.com/solutions/
+    Community: https://community.ultralytics.com
+    GitHub: https://github.com/ultralytics/ultralytics
+    

@@ -1,0 +1,31 @@
+2024-12-12 21:46:59,062 - INFO - Loading dataset configuration from yolo_dataset/dataset.yaml
+2024-12-12 21:46:59,065 - INFO - Initializing YOLOv8-n model for segmentation
+2024-12-12 21:46:59,102 - INFO - Training configuration:
+2024-12-12 21:46:59,102 - INFO - data: yolo_dataset/dataset.yaml
+2024-12-12 21:46:59,102 - INFO - epochs: 100
+2024-12-12 21:46:59,106 - INFO - batch: 8
+2024-12-12 21:46:59,106 - INFO - imgsz: 640
+2024-12-12 21:46:59,106 - INFO - project: runs\segment
+2024-12-12 21:46:59,106 - INFO - name: train
+2024-12-12 21:46:59,106 - INFO - cache: True
+2024-12-12 21:46:59,106 - INFO - device: 
+2024-12-12 21:46:59,106 - INFO - workers: 8
+2024-12-12 21:46:59,106 - INFO - pretrained: True
+2024-12-12 21:46:59,106 - INFO - resume: False
+2024-12-12 21:46:59,106 - INFO - verbose: True
+2024-12-12 21:46:59,106 - INFO - patience: 50
+2024-12-12 21:46:59,106 - INFO - save_period: 10
+2024-12-12 21:46:59,110 - INFO - optimizer: AdamW
+2024-12-12 21:46:59,110 - INFO - lr0: 0.001
+2024-12-12 21:46:59,110 - INFO - lrf: 0.01
+2024-12-12 21:46:59,110 - INFO - momentum: 0.937
+2024-12-12 21:46:59,110 - INFO - weight_decay: 0.0005
+2024-12-12 21:46:59,110 - INFO - warmup_epochs: 3.0
+2024-12-12 21:46:59,110 - INFO - warmup_momentum: 0.8
+2024-12-12 21:46:59,110 - INFO - warmup_bias_lr: 0.1
+2024-12-12 21:46:59,110 - INFO - box: 7.5
+2024-12-12 21:46:59,110 - INFO - cls: 0.5
+2024-12-12 21:46:59,110 - INFO - overlap_mask: True
+2024-12-12 21:46:59,114 - INFO - mask_ratio: 4
+2024-12-12 21:46:59,114 - WARNING - CUDA not available. Training will proceed on CPU
+2024-12-12 21:46:59,114 - INFO - Starting training...

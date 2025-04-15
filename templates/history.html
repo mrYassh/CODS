@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}History - Camouflage Segmentation{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mb-4">Your Segmentation History</h2>
+    
+    {% if history %}
+        <div class="row">
+            {% for item in history %}
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Segmentation from {{ item.created_at.strftime('%Y-%m-%d %H:%M:%S') }}</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Original Image</h6>
+                                    <img src="{{ item.original_image }}" alt="Original Image" class="img-fluid">
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Segmented Image</h6>
+                                    <img src="{{ item.segmented_image }}" alt="Segmented Image" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="alert alert-info">
+            You haven't performed any segmentations yet. Go to the <a href="{{ url_for('home') }}">home page</a> to start!
+        </div>
+    {% endif %}
+</div>
+{% endblock %} 

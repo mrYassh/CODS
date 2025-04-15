@@ -1,0 +1,39 @@
+2024-12-14 22:43:21,052 - INFO - 
+Checking CUDA Setup:
+2024-12-14 22:43:21,077 - INFO - Found 1 CUDA device(s)
+2024-12-14 22:43:21,080 - INFO - GPU 0: NVIDIA GeForce RTX 2050
+2024-12-14 22:43:21,081 - INFO -   Total memory: 4.00 GB
+2024-12-14 22:43:21,082 - INFO -   CUDA Capability: 8.6
+2024-12-14 22:43:21,163 - INFO - Successfully tested CUDA memory allocation
+2024-12-14 22:43:21,163 - INFO - Loading dataset configuration from yolo_dataset/dataset.yaml
+2024-12-14 22:43:21,164 - INFO - Initializing YOLOv8-n model for segmentation
+2024-12-14 22:43:21,202 - INFO - 
+Training configuration:
+2024-12-14 22:43:21,203 - INFO - data: yolo_dataset/dataset.yaml
+2024-12-14 22:43:21,203 - INFO - epochs: 100
+2024-12-14 22:43:21,203 - INFO - batch: 8
+2024-12-14 22:43:21,203 - INFO - imgsz: 640
+2024-12-14 22:43:21,204 - INFO - project: runs\segment
+2024-12-14 22:43:21,204 - INFO - name: train
+2024-12-14 22:43:21,204 - INFO - cache: True
+2024-12-14 22:43:21,205 - INFO - device: 0
+2024-12-14 22:43:21,205 - INFO - workers: 8
+2024-12-14 22:43:21,206 - INFO - pretrained: True
+2024-12-14 22:43:21,206 - INFO - resume: False
+2024-12-14 22:43:21,206 - INFO - verbose: True
+2024-12-14 22:43:21,206 - INFO - patience: 50
+2024-12-14 22:43:21,206 - INFO - save_period: 10
+2024-12-14 22:43:21,206 - INFO - optimizer: AdamW
+2024-12-14 22:43:21,208 - INFO - lr0: 0.001
+2024-12-14 22:43:21,208 - INFO - lrf: 0.01
+2024-12-14 22:43:21,208 - INFO - momentum: 0.937
+2024-12-14 22:43:21,209 - INFO - weight_decay: 0.0005
+2024-12-14 22:43:21,209 - INFO - warmup_epochs: 3.0
+2024-12-14 22:43:21,209 - INFO - warmup_momentum: 0.8
+2024-12-14 22:43:21,209 - INFO - warmup_bias_lr: 0.1
+2024-12-14 22:43:21,210 - INFO - box: 7.5
+2024-12-14 22:43:21,210 - INFO - cls: 0.5
+2024-12-14 22:43:21,210 - INFO - overlap_mask: True
+2024-12-14 22:43:21,211 - INFO - mask_ratio: 4
+2024-12-14 22:43:21,211 - INFO - 
+Starting training...

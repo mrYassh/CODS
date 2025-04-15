@@ -1,0 +1,41 @@
+2024-12-12 22:17:31,593 - INFO - 
+Checking CUDA Setup:
+2024-12-12 22:17:32,227 - INFO - Found 1 CUDA device(s)
+2024-12-12 22:17:32,227 - INFO - GPU 0: NVIDIA GeForce RTX 2050
+2024-12-12 22:17:32,227 - INFO -   Total memory: 4.00 GB
+2024-12-12 22:17:32,227 - INFO -   CUDA Capability: 8.6
+2024-12-12 22:17:32,449 - INFO - Successfully tested CUDA memory allocation
+2024-12-12 22:17:32,449 - INFO - Loading dataset configuration from yolo_dataset/dataset.yaml
+2024-12-12 22:17:32,449 - INFO - Initializing YOLOv8-n model for segmentation
+2024-12-12 22:17:32,514 - INFO - 
+Training configuration:
+2024-12-12 22:17:32,514 - INFO - data: yolo_dataset/dataset.yaml
+2024-12-12 22:17:32,514 - INFO - epochs: 100
+2024-12-12 22:17:32,514 - INFO - batch: 8
+2024-12-12 22:17:32,514 - INFO - imgsz: 640
+2024-12-12 22:17:32,514 - INFO - project: runs\segment
+2024-12-12 22:17:32,514 - INFO - name: train
+2024-12-12 22:17:32,514 - INFO - cache: True
+2024-12-12 22:17:32,514 - INFO - device: 0
+2024-12-12 22:17:32,514 - INFO - workers: 8
+2024-12-12 22:17:32,514 - INFO - pretrained: True
+2024-12-12 22:17:32,514 - INFO - resume: False
+2024-12-12 22:17:32,514 - INFO - verbose: True
+2024-12-12 22:17:32,514 - INFO - patience: 50
+2024-12-12 22:17:32,514 - INFO - save_period: 10
+2024-12-12 22:17:32,514 - INFO - optimizer: AdamW
+2024-12-12 22:17:32,514 - INFO - lr0: 0.001
+2024-12-12 22:17:32,514 - INFO - lrf: 0.01
+2024-12-12 22:17:32,514 - INFO - momentum: 0.937
+2024-12-12 22:17:32,514 - INFO - weight_decay: 0.0005
+2024-12-12 22:17:32,514 - INFO - warmup_epochs: 3.0
+2024-12-12 22:17:32,514 - INFO - warmup_momentum: 0.8
+2024-12-12 22:17:32,524 - INFO - warmup_bias_lr: 0.1
+2024-12-12 22:17:32,524 - INFO - box: 7.5
+2024-12-12 22:17:32,524 - INFO - cls: 0.5
+2024-12-12 22:17:32,524 - INFO - overlap_mask: True
+2024-12-12 22:17:32,525 - INFO - mask_ratio: 4
+2024-12-12 22:17:32,525 - INFO - 
+Starting training...
+2024-12-12 22:57:57,935 - INFO - Training completed. Running validation...
+2024-12-12 22:58:26,558 - INFO - Training and validation completed successfully
