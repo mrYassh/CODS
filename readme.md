@@ -64,7 +64,7 @@ The project uses the following key dependencies:
 
 > A complete walkthrough is available inside the project directory:
 
-📁 **[walkthrough.mp4](walkthrough.mp4)**
+📁 **[walkthrough.mp4](https://github.com/mrYassh/CODS/blob/main/walkthough.mp4)**
 
 The video covers:
 
